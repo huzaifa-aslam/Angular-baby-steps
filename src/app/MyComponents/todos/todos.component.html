@@ -1,3 +1,14 @@
-<div *ngFor="let todo of todos">
-  <app-todo-item [todo]="todo"></app-todo-item>
+<div class="row">
+  <div class="col-md-6 mt-5">
+    <h3>Your Todos</h3>
+    <div *ngFor="let todo of todos">
+      <app-todo-item
+        [todo]="todo"
+        (todoDelete)="deleteTodo($event)"
+      ></app-todo-item>
+    </div>
+  </div>
+  <div class="col-md-6 mt-5">
+    <app-add-todo></app-add-todo>
+  </div>
 </div>
