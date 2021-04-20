@@ -6,7 +6,8 @@
       (click)="checkBoxClick(todo)"
       type="checkbox"
       class="form-check-input"
-      id="exampleCheck1"
+      id="todo{{ i }}"
+      [checked]="!todo.active"
     />
     <label class="form-check-label" for="exampleCheck1">Mark As Done</label>
   </div>

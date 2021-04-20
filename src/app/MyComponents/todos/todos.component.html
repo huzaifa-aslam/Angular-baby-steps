@@ -3,7 +3,7 @@
     <h3>Your Todos</h3>
     <div *ngIf="!this.todos.length; else elseBlock">No todos for display!.</div>
     <ng-template #elseBlock>
-      <div *ngFor="let todo of todos">
+      <div *ngFor="let todo of todos; index as i">
         <app-todo-item
           [todo]="todo"
           (todoDelete)="deleteTodo($event)"
