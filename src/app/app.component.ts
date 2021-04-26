@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'old heading';
-  constructor() {
+  constructor(router: Router) {
     setTimeout(() => {
       this.title = 'new heading';
     }, 4000);
